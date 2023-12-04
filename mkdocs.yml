@@ -1,0 +1,67 @@
+# Project information
+site_name: Observe Workshops
+site_description: 'A collection of workshops for Observe'
+site_author: 'noah@observeinc.com'
+site_url: 'https://observeworkshops.com'
+
+# Repository
+repo_name: 'observeinc/observe-workshops'
+repo_url: 'https://github.com/observeinc/observe-workshops'
+
+# Configuration
+theme:
+  name: material
+  static_templates:
+    - 404.html
+  logo: 'assets/images/observe_logo_light.png'
+  favicon: 'assets/images/observe-light-favicon-192.png'
+  features:
+    - navigation.tabs
+    - navigation.instant
+    - navigation.tracking
+    - navigation.sections
+    - navigation.prune
+    #https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#section-index-pages
+    - navigation.indexes
+  font: false
+
+# Customization
+extra_css:
+  - 'css/custom.css'
+
+extra:
+  social:
+    - icon: fontawesome/solid/house
+      link: https://observeworkshops.com
+    - icon: fontawesome/solid/o
+      link: https://www.observeinc.com/
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/Observe_Inc?lang=en
+    - icon: fontawesome/solid/square-rss
+      link: https://www.observeinc.com/blog/
+
+# Extensions
+markdown_extensions:
+  - admonition
+  - codehilite
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+
+# Navigation
+nav:
+  - Home:
+    - index.md
+    - Getting Started:
+      - workspace-setup.md
+    - contribute.md
+    - license.md
+  - Workshops: 
+    - workshops.md
+    - Infrastructure Monitoring:
+      - workshops/infrastructure-monitoring/infrastructure-monitoring.md
+    - Application Monitoring:
+      - workshops/application-monitoring/application-monitoring.md
+    - Security:
+      - workshops/security/security.md
